@@ -6,7 +6,9 @@ import numpy as np
 ns = [512, 1024, 2048]
 hilos = 4
 repeticiones = 5
-algs = {1: "CPU", 2: "GPU", 3: "GPUSm"}
+algs = {1: "CPU", 
+        2: "GPU",  
+        3: "GPUSm"}
 
 resultados = {name: [] for name in algs.values()}
 

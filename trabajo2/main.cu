@@ -7,9 +7,7 @@
 
 using namespace std;
 
-// ============================================================
 // 1. Versión CPU multicore (OpenMP)
-// ============================================================
 void matmulCPU(float* A, float* B, float* C, int n, int num_threads) {
     #pragma omp parallel for num_threads(num_threads)
     for (int i = 0; i < n; i++) {
@@ -23,9 +21,7 @@ void matmulCPU(float* A, float* B, float* C, int n, int num_threads) {
     }
 }
 
-// ============================================================
 // 2. Versión GPU básica
-// ============================================================
 __global__ void matmulGPU(float* A, float* B, float* C, int n) {
     int fila = blockIdx.y * blockDim.y + threadIdx.y;
     int col  = blockIdx.x * blockDim.x + threadIdx.x;
@@ -39,9 +35,7 @@ __global__ void matmulGPU(float* A, float* B, float* C, int n) {
     }
 }
 
-// ============================================================
 // 3. Versión GPU con memoria compartida
-// ============================================================
 #define TILE_SIZE 16
 
 __global__ void matmulGPUSm(float* A, float* B, float* C, int n) {
@@ -79,9 +73,7 @@ __global__ void matmulGPUSm(float* A, float* B, float* C, int n) {
         C[fila*n + col] = suma;
 }
 
-// ============================================================
 // MAIN
-// ============================================================
 int main(int argc, char** argv) {
 
     if (argc < 4) {
@@ -108,7 +100,7 @@ int main(int argc, char** argv) {
         h_B[i] = static_cast<float>(rand()) / RAND_MAX;
     }
 
-    // ===================== CPU =====================
+    // ---------------- CPU ----------------
     if (alg == 1) {
 
         auto inicio = chrono::high_resolution_clock::now();
@@ -119,7 +111,7 @@ int main(int argc, char** argv) {
         cout << "Tiempo CPU: " << tiempo.count() << " s\n";
     }
 
-    // ===================== GPU =====================
+    // ---------------- GPU ----------------
     else {
 
         float *d_A, *d_B, *d_C;
