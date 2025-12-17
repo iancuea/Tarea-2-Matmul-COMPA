@@ -20,3 +20,8 @@ Para obtener estos datos, ejecuta `lscpu` y `nvidia-smi` en tu terminal y comple
 El proyecto incluye un `Makefile` para facilitar la compilación:
 ```bash
 make
+
+## Ejecucion Manual
+El programa acepta tres parámetros: n (tamaño), nt (hilos CPU) y alg (algoritmo 1, 2 o 3).
+```bash
+./prog <n> <nt> <alg>
