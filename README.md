@@ -1,5 +1,6 @@
 # Tarea 2: Multiplicación de Matrices (Matmul) - Computación Paralela
 Integrantes: Marcelo Lara e Ian Cuevas
+
 Este proyecto implementa y compara tres versiones del algoritmo de multiplicación de matrices (Matmul) para analizar el rendimiento entre CPU y GPU (CUDA).
 
 ## 1. Hardware Utilizado
