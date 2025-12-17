@@ -4,10 +4,11 @@ Este proyecto implementa y compara tres versiones del algoritmo de multiplicaci�
 
 ## 1. Hardware Utilizado
 Para obtener estos datos, ejecuta `lscpu` y `nvidia-smi` en tu terminal y completa los campos:
-- **CPU:** [Escribe aquí el modelo, ej: Intel Core i7]
-- **GPU:** [Escribe aquí el modelo, ej: NVIDIA RTX 3060]
-- **Memoria RAM:** [Ej: 16 GB]
+- **CPU:** AMD Ryzen 7 4000 Series (8 cores / 16 threads)
+- **GPU:** NVIDIA GeForce RTX 2060 (6 GB VRAM)
+- **Memoria RAM:** 16 GB
 - **Sistema Operativo:** Ubuntu (Linux)
+- **Cuda Toolkit** CUDA 12.0
 
 ## 2. Algoritmos Implementados
 1. **CPU Multicore (OpenMP):** Implementación en C++ usando hilos para paralelizar los bucles anidados.
@@ -32,6 +33,7 @@ Para ejecutar los experimentos automáticos y generar las comparativas:
 ```bash
 python3 experimentos.py>
 ```
+Esto generara los archivos ´tiempo.png´ y ´speedup.png´
 ## 4. Análisis de Resultados 
 
 ### Comparativa de Tiempos
