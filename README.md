@@ -32,7 +32,7 @@ El programa acepta tres parámetros: n (tamaño), nt (hilos CPU) y alg (algoritm
 ## Generacion de Graficos
 Para ejecutar los experimentos automáticos y generar las comparativas:
 ```bash
-python3 experimentos.py>
+python3 experimentos.py
 ```
 Esto generara los archivos `tiempo.png` y  `speedup.png`
 ## 4. Análisis de Resultados 
