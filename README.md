@@ -34,7 +34,7 @@ Para ejecutar los experimentos automáticos y generar las comparativas:
 python3 experimentos.py>
 ```
 Esto generara los archivos `tiempo.png` y  `speedup.png`
-## 4. Análisis de Resultados (Punto 9)
+## 4. Análisis de Resultados 
 
 ### Comparación de Tiempos
 Al observar el gráfico `tiempo.png`, se puede notar lo siguiente:
