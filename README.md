@@ -32,7 +32,7 @@ Para ejecutar los experimentos automáticos y generar las comparativas:
 ```bash
 python3 experimentos.py>
 ```
-## 4. Análisis de Resultados (Punto 9)
+## 4. Análisis de Resultados 
 
 ### Comparativa de Tiempos
 Al observar el archivo `tiempo.png`, se nota que:
